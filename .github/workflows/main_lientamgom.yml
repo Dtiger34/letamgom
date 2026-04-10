@@ -61,7 +61,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: legoshop-build
+          name: lientamgom-build
           path: deploy
 
       - name: Login to Azure
