@@ -164,11 +164,11 @@
   object-fit: cover;
 }
 
-.product-details {
+.product-info {
   flex: 1;
 }
 
-.product-details h3 {
+.product-info h3 {
   font-family: Quicksand, sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -220,22 +220,24 @@
 }
 
 .product-item-actions .btn.btn-primary {
-  background: #000;
+  background: #8B6F47;
   color: white;
+  border: 1px solid #8B6F47;
 }
 
 .product-item-actions .btn.btn-primary:hover {
-  background: #333;
+  background: #6F5838;
+  border-color: #6F5838;
 }
 
 .product-item-actions .btn.btn-secondary {
   background: white;
-  color: #000;
-  border: 1px solid #000;
+  color: #8B6F47;
+  border: 1px solid #8B6F47;
 }
 
 .product-item-actions .btn.btn-secondary:hover {
-  background: #000;
+  background: #8B6F47;
   color: white;
 }
 

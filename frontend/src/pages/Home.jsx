@@ -17,7 +17,10 @@ export default function Home() {
     const fetchProducts = async () => {
       try {
         const data = await getProducts({ limit: 4 });
-        setFeaturedProducts(data.products || []);
+        // Get products from API and filter only active ones
+        const allProducts = data.products || data.data || [];
+        const activeProducts = allProducts.filter((p) => p.active !== false);
+        setFeaturedProducts(activeProducts);
       } catch (error) {
         console.error('Error fetching products:', error);
       } finally {
@@ -107,14 +110,14 @@ export default function Home() {
                   </p>
                   <div className="product-actions">
                     <button
-                      className="btn-add-cart"
+                      className="home-btn-add-cart"
                       onClick={() => handleAddToCart(product)}
                     >
                       Thêm vào giỏ
                     </button>
                     <Link
                       to={`/products/${product._id}`}
-                      className="btn-detail"
+                      className="home-btn-detail"
                     >
                       Xem chi tiết
                     </Link>

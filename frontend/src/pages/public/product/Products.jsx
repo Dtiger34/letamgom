@@ -20,8 +20,12 @@ export default function Products() {
     const fetchProducts = async () => {
       try {
         const data = await getProducts({});
-        setProducts(data.products || []);
-        setFilteredProducts(data.products || []);
+        // Get products from API and filter only active ones
+        const allProducts = data.products || data.data || [];
+        const activeProducts = allProducts.filter((p) => p.active !== false);
+        console.log('Fetched products:', activeProducts);
+        setProducts(activeProducts);
+        setFilteredProducts(activeProducts);
       } catch (error) {
         console.error('Error fetching products:', error);
       } finally {
@@ -40,7 +44,7 @@ export default function Products() {
       filtered = filtered.filter(
         (p) =>
           p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          p.code.toLowerCase().includes(searchTerm.toLowerCase())
+          (p.code && p.code.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
 
@@ -66,6 +70,7 @@ export default function Products() {
       filtered.sort((a, b) => b.price - a.price);
     }
 
+    console.log('Filtered products for render:', filtered);
     setFilteredProducts(filtered);
   }, [products, sortBy, priceFilter, searchTerm]);
 
@@ -187,9 +192,9 @@ export default function Products() {
                       onError={(e) => (e.target.src = '🏺')}
                     />
                   </div>
-                  <div className="product-details">
+                  <div className="product-info">
                     <h3>{product.name}</h3>
-                    <p className="product-code">{product.code}</p>
+                    
                     <p className="product-description">{product.description}</p>
                     <p className="product-price">
                       {product.price?.toLocaleString('vi-VN')} VND

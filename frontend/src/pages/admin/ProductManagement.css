@@ -217,11 +217,11 @@
   background: #229954 !important;
 }
 
-.product-details {
+.product-management .product-details {
   display: none;
 }
 
-.product-details.show {
+.product-management .product-details.show {
   display: table-row;
 }
 

@@ -200,39 +200,38 @@
   margin-top: auto;
 }
 
-.btn-add-cart,
-.btn-detail {
+.home-btn-add-cart,
+.home-btn-detail {
   padding: 10px 15px;
   font-size: 13px;
   font-family: Quicksand, sans-serif;
-  border: none;
+  border: 1px solid #8B6F47;
   cursor: pointer;
   transition: all 0.3s;
   text-decoration: none;
   display: inline-block;
   text-align: center;
-}
-
-.btn-add-cart {
-  background: #C9B8A0;
-  color: #fff;
-  border: 1px solid #C9B8A0;
   font-weight: 500;
 }
 
-.btn-add-cart:hover {
-  background: #B5A089;
-  border-color: #B5A089;
+.home-btn-add-cart {
+  background: #8B6F47;
+  color: #fff;
 }
 
-.btn-detail {
+.home-btn-add-cart:hover {
+  background: #6F5838;
+  border-color: #6F5838;
+}
+
+.home-btn-detail {
   background: white;
-  color: #7367f0;
-  border: 1px solid #7367f0;
+  color: #8B6F47;
 }
 
-.btn-detail:hover {
-  background: #f0f0f0;
+.home-btn-detail:hover {
+  background: #8B6F47;
+  color: white;
 }
 
 /* ============ ABOUT SNIPPET ============ */

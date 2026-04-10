@@ -82,6 +82,7 @@ const seedDB = async () => {
         description: "Bình hút lộc độc đáo, phù hợp trang trí nội thất cao cấp",
         images: ["/upload/H250.jpg"],
         stock: 50,
+        active: true,
       },
       {
         name: "Trứng Tài Lộc Liên Tâm Gốm",
@@ -90,6 +91,7 @@ const seedDB = async () => {
         description: "Trứng tài lộc mang ý nghĩa may mắn và thịnh vượng",
         images: ["/upload/H251.jpg"],
         stock: 50,
+        active: true,
       },
       {
         name: "Đĩa Cảnh Liên Tâm Gốm",
@@ -98,6 +100,7 @@ const seedDB = async () => {
         description: "Đĩa cảnh tinh xảo, là tác phẩm nghệ thuật gốm tuyệt đẹp",
         images: ["/upload/H252.jpg"],
         stock: 80,
+        active: true,
       },
       {
         name: "Bình Hoa Mẫu Đơn Liên Tâm Gốm",
@@ -106,6 +109,7 @@ const seedDB = async () => {
         description: "Bình hoa hình mẫu đơn, biểu tượng của sự sang trọng",
         images: ["/upload/H253.jpg"],
         stock: 50,
+        active: true,
       },
       {
         name: "Hũ Đựng Trà Liên Tâm Gốm",
@@ -114,6 +118,7 @@ const seedDB = async () => {
         description: "Hũ đựng trà cao cấp, giữ hương vị trà tự nhiên",
         images: ["/upload/H254.jpg"],
         stock: 60,
+        active: true,
       },
       {
         name: "Bình Tích Lộc Tứ Cảnh Liên Tâm Gốm",
@@ -122,6 +127,7 @@ const seedDB = async () => {
         description: "Bình tích lộc tứ cảnh, tác phẩm quý giá dành cho những bộ sưu tập đặc biệt",
         images: ["/upload/H255.jpg"],
         stock: 30,
+        active: true,
       },
       {
         name: "Bình Hoa Phi Yến Chim Hoa Lựu",
@@ -130,6 +136,7 @@ const seedDB = async () => {
         description: "Bình hoa phi yến với họa tiết chim hoa lựu, tinh tế và đầy màu sắc",
         images: ["/upload/H256.jpg"],
         stock: 45,
+        active: true,
       },
       {
         name: "Bình Hút Tài Lộc Cửu Ngư Hoa Sen Liên Tâm Gốm",
@@ -138,6 +145,7 @@ const seedDB = async () => {
         description: "Bình hút tài lộc cửu ngư hoa sen, tác phẩm cao cấp nhất, biểu tượng của thịnh vượng tối cao",
         images: ["/upload/H257.jpg"],
         stock: 10,
+        active: true,
       },
       {
         name: "Bình Tứ Cảnh Sơn Thủy Liên Tâm Gốm",
@@ -146,6 +154,7 @@ const seedDB = async () => {
         description: "Bình tứ cảnh sơn thủy, kỳ công về nghệ thuật sơn mài và thiết kế",
         images: ["/upload/H258.jpg"],
         stock: 20,
+        active: true,
       },
     ]);
     console.log("✓ Sản phẩm đã được thêm:", products.length);
@@ -252,7 +261,7 @@ const seedDB = async () => {
           phone: "+84987654321",
           address: "456 Đường Trần Hưng Đạo, Quận 4, TP.HCM",
         },
-        status: "shipping",
+        status: "shipped",
         paymentMethod: "COD",
         isPaid: true,
         paidAt: new Date("2026-02-03"),
