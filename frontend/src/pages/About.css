@@ -1,0 +1,287 @@
+.about-page {
+  background: white;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #8B6F47 0%, #C4A76B 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+}
+
+.about-story {
+  margin-bottom: 4rem;
+}
+
+.about-story h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #8B6F47;
+  text-align: center;
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.story-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #555;
+  font-size: 1rem;
+}
+
+.story-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  min-height: 300px;
+  overflow: hidden;
+  border: 12px solid #C4A76B;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-inspiration {
+  margin-bottom: 4rem;
+  padding: 3rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.about-inspiration h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #8B6F47;
+  text-align: center;
+}
+
+.inspiration-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.inspiration-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.inspiration-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-philosophy {
+  margin-bottom: 4rem;
+}
+
+.about-philosophy h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #8B6F47;
+  text-align: center;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.philosophy-item {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.philosophy-item:hover {
+  transform: translateY(-5px);
+}
+
+.philosophy-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.philosophy-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #8B6F47;
+  font-weight: 700;
+}
+
+.philosophy-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.about-process {
+  margin-bottom: 4rem;
+}
+
+.about-process h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #8B6F47;
+  text-align: center;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.step {
+  background: white;
+  border: 2px solid #C4A76B;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.step:hover {
+  box-shadow: 0 4px 12px rgba(139, 111, 71, 0.2);
+}
+
+.step-number {
+  background: linear-gradient(135deg, #8B6F47 0%, #C4A76B 100%);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.step h3 {
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.step p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.about-values {
+  background: #f9f9f9;
+  padding: 3rem;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+
+.about-values h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #8B6F47;
+  text-align: center;
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.values-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.values-list li:last-child {
+  border-bottom: none;
+}
+
+.values-list strong {
+  color: #8B6F47;
+}
+
+.contact-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #8B6F47 0%, #C4A76B 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.contact-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.contact-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .story-content {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}

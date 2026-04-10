@@ -4,7 +4,6 @@ require("dotenv").config();
 
 // Import Models
 const User = require("./model/User");
-const Category = require("./model/Category");
 const Product = require("./model/Product");
 const Review = require("./model/Review");
 const Cart = require("./model/Cart");
@@ -27,7 +26,6 @@ const connectDB = async () => {
 const clearDB = async () => {
   try {
     await User.deleteMany({});
-    await Category.deleteMany({});
     await Product.deleteMany({});
     await Review.deleteMany({});
     await Cart.deleteMany({});
@@ -41,14 +39,6 @@ const clearDB = async () => {
 // Seed data
 const seedDB = async () => {
   try {
-    // Create Categories
-    const categories = await Category.insertMany([
-      { name: "Đồ uống", slug: "do-uong" },
-      { name: "Đồ dùng sinh hoạt", slug: "do-dung-sinh-hoat" },
-      { name: "Đồ decor", slug: "do-decor" },
-    ]);
-    console.log("✓ Danh mục đã được thêm:", categories.length);
-
     // Create Users (manually hash passwords to bypass hook)
     const hashPassword = async (pwd) => {
       const salt = await bcryptjs.genSalt(10);
@@ -58,26 +48,26 @@ const seedDB = async () => {
     const users = await User.insertMany([
       {
         name: "Quản Trị Viên",
-        email: "trelab.store@gmail.com",
+        email: "lientamgom@gmail.com",
         password: await hashPassword("admin123"),
         role: "admin",
       },
       {
-        name: "Nguyễn Văn A",
-        email: "nguyenvana@example.com",
-        password: await hashPassword("john123"),
+        name: "Trương Mạnh Hùng",
+        email: "truongmanhhung@gmail.com",
+        password: await hashPassword("user123"),
         role: "user",
       },
       {
-        name: "Trần Thị B",
-        email: "tranthib@example.com",
-        password: await hashPassword("jane123"),
+        name: "Lê Thị Hương",
+        email: "lethihuong@gmail.com",
+        password: await hashPassword("user123"),
         role: "user",
       },
       {
-        name: "Phạm Văn C",
-        email: "phamvanc@example.com",
-        password: await hashPassword("bob123"),
+        name: "Phạm Đức Long",
+        email: "phamducklong@gmail.com",
+        password: await hashPassword("user123"),
         role: "user",
       },
     ]);
@@ -85,73 +75,77 @@ const seedDB = async () => {
 
     // Create Products
     const products = await Product.insertMany([
-      // ===== ĐỒ UỐNG =====
       {
-        name: "Bình giữ nhiệt",
-        price: 199000,
-        description: "Bình giữ nhiệt cao cấp, giữ nóng/lạnh lâu dài",
-        images: ["/upload/binh_giu_nhiet.PNG"],
-        category: categories[0]._id,
+        name: "Bình Hút Lộc Liên Tâm Gốm",
+        code: "H250",
+        price: 2650000,
+        description: "Bình hút lộc độc đáo, phù hợp trang trí nội thất cao cấp",
+        images: ["/upload/H250.jpg"],
         stock: 50,
       },
       {
-        name: "Cốc có quai",
-        price: 149000,
-        description: "Cốc bamboo có quai tiện lợi, phù hợp một tay",
-        images: ["/upload/coc_co_quai.PNG"],
-        category: categories[0]._id,
+        name: "Trứng Tài Lộc Liên Tâm Gốm",
+        code: "H251",
+        price: 2650000,
+        description: "Trứng tài lộc mang ý nghĩa may mắn và thịnh vượng",
+        images: ["/upload/H251.jpg"],
+        stock: 50,
+      },
+      {
+        name: "Đĩa Cảnh Liên Tâm Gốm",
+        code: "H252",
+        price: 650000,
+        description: "Đĩa cảnh tinh xảo, là tác phẩm nghệ thuật gốm tuyệt đẹp",
+        images: ["/upload/H252.jpg"],
         stock: 80,
       },
       {
-        name: "Cốc giữ nhiệt có nắp",
-        price: 199000,
-        description: "Cốc giữ nhiệt có nắp kín, giữ nguyên vị thức uống",
-        images: ["/upload/coc_giu_nhiet_co_nap.PNG"],
-        category: categories[0]._id,
-        stock: 70,
+        name: "Bình Hoa Mẫu Đơn Liên Tâm Gốm",
+        code: "H253",
+        price: 2650000,
+        description: "Bình hoa hình mẫu đơn, biểu tượng của sự sang trọng",
+        images: ["/upload/H253.jpg"],
+        stock: 50,
       },
       {
-        name: "Cốc khảm sơn mài",
-        price: 129000,
-        description: "Cốc bamboo khảm sơn mài, họa tiết truyền thống đẹp mắt",
-        images: ["/upload/coc_kham_son_mai.PNG"],
-        category: categories[0]._id,
+        name: "Hũ Đựng Trà Liên Tâm Gốm",
+        code: "H254",
+        price: 1850000,
+        description: "Hũ đựng trà cao cấp, giữ hương vị trà tự nhiên",
+        images: ["/upload/H254.jpg"],
         stock: 60,
       },
       {
-        name: "Cốc trơn size 10cm",
-        price: 39000,
-        description: "Cốc bamboo trơn kích thước 10cm, nhẹ nhàng và dễ sử dụng",
-        images: ["/upload/coc_tron_size_10cm.PNG"],
-        category: categories[0]._id,
-        stock: 100,
+        name: "Bình Tích Lộc Tứ Cảnh Liên Tâm Gốm",
+        code: "H255",
+        price: 7700000,
+        description: "Bình tích lộc tứ cảnh, tác phẩm quý giá dành cho những bộ sưu tập đặc biệt",
+        images: ["/upload/H255.jpg"],
+        stock: 30,
       },
       {
-        name: "Cốc trơn size 12cm",
-        price: 49000,
-        description:
-          "Cốc bamboo trơn kích thước 12cm, vừa tay, dung tích vừa đủ",
-        images: ["/upload/coc_tron_size_12cm.png"],
-        category: categories[0]._id,
-        stock: 90,
+        name: "Bình Hoa Phi Yến Chim Hoa Lựu",
+        code: "H256",
+        price: 2200000,
+        description: "Bình hoa phi yến với họa tiết chim hoa lựu, tinh tế và đầy màu sắc",
+        images: ["/upload/H256.jpg"],
+        stock: 45,
       },
       {
-        name: "Cốc trơn size 15cm",
-        price: 54000,
-        description:
-          "Cốc bamboo trơn kích thước 15cm, dung tích lớn cho những ai thích uống nhiều",
-        images: ["/upload/coc_tron_size_15cm.PNG"],
-        category: categories[0]._id,
-        stock: 75,
+        name: "Bình Hút Tài Lộc Cửu Ngư Hoa Sen Liên Tâm Gốm",
+        code: "H257",
+        price: 30000000,
+        description: "Bình hút tài lộc cửu ngư hoa sen, tác phẩm cao cấp nhất, biểu tượng của thịnh vượng tối cao",
+        images: ["/upload/H257.jpg"],
+        stock: 10,
       },
       {
-        name: "Cốc vẽ truyền thống",
-        price: 119000,
-        description:
-          "Cốc bamboo vẽ tay hoạ tiết truyền thống, độc đáo và tinh tế",
-        images: ["/upload/coc_ve_truyen_thong.PNG"],
-        category: categories[0]._id,
-        stock: 65,
+        name: "Bình Tứ Cảnh Sơn Thủy Liên Tâm Gốm",
+        code: "H258",
+        price: 18000000,
+        description: "Bình tứ cảnh sơn thủy, kỳ công về nghệ thuật sơn mài và thiết kế",
+        images: ["/upload/H258.jpg"],
+        stock: 20,
       },
     ]);
     console.log("✓ Sản phẩm đã được thêm:", products.length);
@@ -162,31 +156,31 @@ const seedDB = async () => {
         user: users[1]._id,
         product: products[0]._id,
         rating: 5,
-        comment: "Bình giữ nhiệt rất tốt! Giữ nóng được lâu và thiết kế đẹp.",
+        comment: "Bình hút lộc rất đẹp! Chất lượng gốm tuyệt vời, trang trí nhà thật sang trọng.",
       },
       {
         user: users[2]._id,
         product: products[0]._id,
-        rating: 4,
-        comment: "Chất lượng tốt, nhưng giá hơi cao một chút.",
+        rating: 5,
+        comment: "Sản phẩm gốm truyền thống, chi tiết và tinh xảo. Rất hài lòng!",
       },
       {
         user: users[1]._id,
-        product: products[1]._id,
+        product: products[2]._id,
         rating: 5,
-        comment: "Cốc có quai rất tiện dụng! Dễ dùng một tay.",
+        comment: "Đĩa cảnh xinh đẹp, họa tiết tinh tế. Quá xuất sắc!",
       },
       {
         user: users[3]._id,
-        product: products[2]._id,
+        product: products[4]._id,
         rating: 5,
-        comment: "Hài lòng với sản phẩm, nắp kín tốt và không rò rỉ.",
+        comment: "Hũ đựng trà rất chắc chắn, giữ mùi trà tuyệt vời.",
       },
       {
         user: users[2]._id,
-        product: products[3]._id,
+        product: products[1]._id,
         rating: 4,
-        comment: "Họa tiết đẹp, cốc chắc chắn và bền.",
+        comment: "Trứng tài lộc đẹp lắm, mang ý nghĩa tốt lành.",
       },
     ]);
     console.log("✓ Đánh giá đã được thêm:", reviews.length);
@@ -213,26 +207,26 @@ const seedDB = async () => {
         user: users[1]._id,
         items: [
           {
-            product: products[1]._id,
-            name: products[1].name,
-            price: products[1].price,
+            product: products[0]._id,
+            name: products[0].name,
+            price: products[0].price,
             quantity: 1,
           },
           {
             product: products[2]._id,
             name: products[2].name,
             price: products[2].price,
-            quantity: 2,
+            quantity: 1,
           },
         ],
-        totalPrice: products[1].price + products[2].price * 2,
+        totalPrice: products[0].price + products[2].price,
         shippingAddress: {
           fullName: "Nguyễn Văn A",
           phone: "+84912345678",
           address: "123 Đường Nguyễn Huệ, Quận 1, TP.HCM",
         },
         status: "completed",
-        paymentMethod: "Credit Card",
+        paymentMethod: "Bank Transfer",
         isPaid: true,
         paidAt: new Date("2026-02-01"),
       },
@@ -240,32 +234,11 @@ const seedDB = async () => {
         user: users[2]._id,
         items: [
           {
-            product: products[0]._id,
-            name: products[0].name,
-            price: products[0].price,
+            product: products[1]._id,
+            name: products[1].name,
+            price: products[1].price,
             quantity: 1,
           },
-          {
-            product: products[3]._id,
-            name: products[3].name,
-            price: products[3].price,
-            quantity: 1,
-          },
-        ],
-        totalPrice: products[0].price + products[3].price,
-        shippingAddress: {
-          fullName: "Trần Thị B",
-          phone: "+84987654321",
-          address: "456 Đường Trần Hưng Đạo, Quận 4, TP.HCM",
-        },
-        status: "shipping",
-        paymentMethod: "PayPal",
-        isPaid: true,
-        paidAt: new Date("2026-02-03"),
-      },
-      {
-        user: users[3]._id,
-        items: [
           {
             product: products[4]._id,
             name: products[4].name,
@@ -273,7 +246,28 @@ const seedDB = async () => {
             quantity: 1,
           },
         ],
-        totalPrice: products[4].price,
+        totalPrice: products[1].price + products[4].price,
+        shippingAddress: {
+          fullName: "Trần Thị B",
+          phone: "+84987654321",
+          address: "456 Đường Trần Hưng Đạo, Quận 4, TP.HCM",
+        },
+        status: "shipping",
+        paymentMethod: "COD",
+        isPaid: true,
+        paidAt: new Date("2026-02-03"),
+      },
+      {
+        user: users[3]._id,
+        items: [
+          {
+            product: products[3]._id,
+            name: products[3].name,
+            price: products[3].price,
+            quantity: 1,
+          },
+        ],
+        totalPrice: products[3].price,
         shippingAddress: {
           fullName: "Phạm Văn C",
           phone: "+84933333333",

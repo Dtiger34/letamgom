@@ -1,0 +1,512 @@
+/* Home Page Styles - Based on Ceramic Studio Template */
+
+.home {
+  width: 100%;
+  background: white;
+}
+
+/* ============ HERO SECTION ============ */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-family: Quicksand, sans-serif;
+  font-size: 72px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  color: #ffffff !important;
+}
+
+.hero-subtitle {
+  font-family: Quicksand, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 2.5rem 0;
+  opacity: 1;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle em {
+  font-style: italic;
+  color: #ffffff !important;
+}
+
+.hero-button {
+  display: flex;
+  justify-content: center;
+}
+
+.shop-btn {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 1px;
+  font-family: Quicksand, sans-serif;
+}
+
+.shop-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* ============ COLLECTION SECTION ============ */
+.collection-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.container {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section-title {
+  font-family: Quicksand, sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.section-description {
+  font-family: Quicksand, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+  max-width: 744px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+/* Products Showcase Grid */
+.products-showcase {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 2rem;
+}
+
+.product-showcase-card {
+  background: white;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-showcase-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-image-wrapper {
+  width: 100%;
+  height: 280px;
+  background: #f5f5f5;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.product-showcase-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.product-showcase-card:hover .product-showcase-image {
+  transform: scale(1.05);
+}
+
+.product-name {
+  font-family: Quicksand, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #000;
+}
+
+.product-code {
+  font-family: Quicksand, sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 0 0 0.75rem 0;
+}
+
+.product-price {
+  font-family: Quicksand, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 1.25rem 0;
+}
+
+.product-actions {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.btn-add-cart,
+.btn-detail {
+  padding: 10px 15px;
+  font-size: 13px;
+  font-family: Quicksand, sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-add-cart {
+  background: #C9B8A0;
+  color: #fff;
+  border: 1px solid #C9B8A0;
+  font-weight: 500;
+}
+
+.btn-add-cart:hover {
+  background: #B5A089;
+  border-color: #B5A089;
+}
+
+.btn-detail {
+  background: white;
+  color: #7367f0;
+  border: 1px solid #7367f0;
+}
+
+.btn-detail:hover {
+  background: #f0f0f0;
+}
+
+/* ============ ABOUT SNIPPET ============ */
+/* Inspiration Section */
+.inspiration-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.inspiration-content {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  text-align: justify;
+}
+
+.inspiration-content p {
+  font-family: Quicksand, sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.inspiration-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Heritage Section */
+.heritage-section {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.heritage-section .section-description {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  text-align: justify;
+}
+
+.about-snippet {
+  padding: 60px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.about-snippet h2 {
+  font-family: Quicksand, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+  color: #000;
+}
+
+.about-snippet p {
+  font-family: Quicksand, sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.btn-learn-more {
+  font-family: Quicksand, sans-serif;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.btn-learn-more:hover {
+  transform: translateX(4px);
+}
+
+/* ============ CTA FINAL SECTION ============ */
+.cta-final {
+  position: relative;
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-final h2 {
+  font-family: Quicksand, sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  letter-spacing: 1px;
+}
+
+.cta-final p {
+  font-family: Quicksand, sans-serif;
+  font-size: 16px;
+  margin: 0 0 2.5rem 0;
+  opacity: 0.85;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-contact,
+.btn-shop {
+  padding: 12px 40px;
+  font-size: 14px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+.btn-contact {
+  background: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.btn-contact:hover {
+  background: #000;
+  color: white;
+}
+
+.btn-shop {
+  background: white;
+  color: #2c2c2c;
+}
+
+.btn-shop:hover {
+  background: #f0f0f0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .products-showcase {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journey-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose-us {
+    padding: 60px 0;
+  }
+
+  .the-journey {
+    padding: 60px 0;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .collection-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 13px;
+  }
+
+  .products-showcase {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product-image-wrapper {
+    height: 200px;
+  }
+
+  .product-name {
+    font-size: 14px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
+
+  .about-snippet {
+    padding: 40px 0;
+  }
+
+  .about-snippet h2 {
+    font-size: 24px;
+  }
+
+  .about-snippet p {
+    font-size: 14px;
+  }
+
+  .cta-final {
+    padding: 60px 0;
+  }
+
+  .cta-final h2 {
+    font-size: 28px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-contact,
+  .btn-shop {
+    width: 100%;
+  }
+}

@@ -1,0 +1,183 @@
+.thank-you-page {
+  padding: 3rem 0;
+  background: white;
+  min-height: calc(100vh - 70px);
+}
+
+.thank-you-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: #27ae60;
+  margin-bottom: 1rem;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: #e8f8f0;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.thank-you-page h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.main-message {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.order-info {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #8B6F47;
+}
+
+.info-item {
+  margin-bottom: 1rem;
+}
+
+.info-label {
+  display: block;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  display: block;
+  font-size: 1.2rem;
+  color: #8B6F47;
+  word-break: break-all;
+  font-family: monospace;
+}
+
+.info-description {
+  color: #666;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.next-steps {
+  background: linear-gradient(135deg, #8B6F47 0%, #C4A76B 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.next-steps h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.next-steps ol {
+  margin-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.next-steps li {
+  margin-bottom: 0.75rem;
+}
+
+.contact-info {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.contact-info h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-info p {
+  margin-bottom: 0.75rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: #8B6F47;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #C4A76B;
+}
+
+.thank-you-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thank-you-actions .btn {
+  flex: 1;
+  min-width: 200px;
+}
+
+.notes {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #856404;
+}
+
+.notes p {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .thank-you-page {
+    padding: 2rem 0;
+  }
+
+  .thank-you-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .thank-you-actions {
+    flex-direction: column;
+  }
+
+  .thank-you-actions .btn {
+    min-width: auto;
+  }
+
+  .next-steps {
+    text-align: center;
+  }
+
+  .next-steps ol {
+    text-align: left;
+  }
+}

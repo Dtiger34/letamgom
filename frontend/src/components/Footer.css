@@ -1,0 +1,116 @@
+.footer {
+  background: #f0f0f0;
+  color: #333;
+  padding: 60px 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.footer-section h3 {
+  font-family: Quicksand, sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h4 {
+  font-family: Quicksand, sans-serif;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  font-family: Quicksand, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.footer-section a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #666;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+  font-family: Quicksand, sans-serif;
+  font-size: 13px;
+}
+
+.footer-section ul li a {
+  color: #666;
+}
+
+.footer-section ul li a:hover {
+  color: #000;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid #999;
+  border-radius: 2px;
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background: #000;
+  color: white;
+  border-color: #000;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 15px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-section h3 {
+    font-size: 14px;
+  }
+}

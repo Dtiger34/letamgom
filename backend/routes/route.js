@@ -4,7 +4,6 @@ const router = express.Router()
 const authController = require('../controller/authController')
 const jwtConfig = require('../config/jwt')
 const productController = require('../controller/product/productController')
-const categoryController = require('../controller/category/categoryController')
 const userController = require('../controller/user/userController')
 const reviewController = require('../controller/review/reviewController')
 const orderController = require('../controller/order/orderController')
@@ -22,13 +21,6 @@ router.get('/products/:id', productController.getProductById)
 router.post('/products', jwtConfig.requireAdmin, productController.createProduct)
 router.put('/products/:id', jwtConfig.requireAdmin, productController.updateProduct)
 router.delete('/products/:id', jwtConfig.requireAdmin, productController.deleteProduct)
-
-// category routes
-router.get('/categories', categoryController.getCategories)
-router.get('/categories/:id', categoryController.getCategoryById)
-router.post('/categories', jwtConfig.requireAdmin, categoryController.createCategory)
-router.put('/categories/:id', jwtConfig.requireAdmin, categoryController.updateCategory)
-router.delete('/categories/:id', jwtConfig.requireAdmin, categoryController.deleteCategory)
 
 // user routes
 router.get('/users', jwtConfig.requireAdmin, userController.getUsers)

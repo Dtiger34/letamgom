@@ -1,16 +1,9 @@
 const Product = require('../../model/Product')
-const Category = require('../../model/Category')
 
 // Create product (admin)
 exports.createProduct = async (req, res) => {
 	try {
 		const data = req.body
-		// optional: validate category exists
-		if (data.category) {
-			const cat = await Category.findById(data.category)
-			if (!cat) return res.status(400).json({ message: 'Invalid category' })
-		}
-
 		const product = await Product.create(data)
 		res.status(201).json(product)
 	} catch (err) {
@@ -21,19 +14,29 @@ exports.createProduct = async (req, res) => {
 // Get list of products (public)
 exports.getProducts = async (req, res) => {
 	try {
-		const { page = 1, limit = 20, q, category } = req.query
+		const page = Math.max(1, parseInt(req.query.page) || 1)
+		const limit = Math.max(1, Math.min(100, parseInt(req.query.limit) || 20))
+		const q = req.query.q
+
 		const filter = {}
 		if (q) filter.name = { $regex: q, $options: 'i' }
-		if (category) filter.category = category
 
+		const skip = (page - 1) * limit
 		const products = await Product.find(filter)
-			.skip((page - 1) * limit)
-			.limit(Number(limit))
-			.populate('category')
+			.skip(skip)
+			.limit(limit)
 
 		const total = await Product.countDocuments(filter)
+		const pages = Math.ceil(total / limit)
 
-		res.json({ products, data: products, total })
+		res.json({
+			products,
+			data: products,
+			total,
+			page,
+			limit,
+			pages
+		})
 	} catch (err) {
 		res.status(500).json({ message: 'Server error', error: err.message })
 	}
@@ -42,7 +45,7 @@ exports.getProducts = async (req, res) => {
 // Get single product by id (public)
 exports.getProductById = async (req, res) => {
 	try {
-		const product = await Product.findById(req.params.id).populate('category')
+		const product = await Product.findById(req.params.id)
 		if (!product) return res.status(404).json({ message: 'Product not found' })
 		res.json(product)
 	} catch (err) {
@@ -54,11 +57,6 @@ exports.getProductById = async (req, res) => {
 exports.updateProduct = async (req, res) => {
 	try {
 		const updates = req.body
-		if (updates.category) {
-			const cat = await Category.findById(updates.category)
-			if (!cat) return res.status(400).json({ message: 'Invalid category' })
-		}
-
 		const product = await Product.findByIdAndUpdate(req.params.id, updates, { new: true })
 		if (!product) return res.status(404).json({ message: 'Product not found' })
 		res.json(product)
