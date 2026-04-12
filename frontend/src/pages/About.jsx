@@ -113,42 +113,54 @@ export default function About() {
           <div className="process-steps">
             <div className="step">
               <div className="step-number">1</div>
-              <h3>Lựa Chọn Đất</h3>
+              <h3>Nhập Khẩu & Kiểm Tra</h3>
               <p>
-                Sử dụng đất từ Nam Sách, nơi hội tụ giá trị địa chất, lịch sử và
-                phong thủy.
+                Nhập khẩu phôi gốm Chu Đậu chất lượng cao từ các nhà cung cấp
+                uy tín. Kiểm tra nghiêm ngặt độ bền, hình dáng và độ trắng ngà
+                trước khi đưa vào sản xuất.
               </p>
             </div>
             <div className="step">
               <div className="step-number">2</div>
-              <h3>Thiết Kế</h3>
+              <h3>Thiết Kế Họa Tiết</h3>
               <p>
-                Thiết kế tác phẩm dựa trên lâu đài truyền thống và xu hướng
-                đương đại.
+                Đội ngũ thiết kế xây dựng họa tiết dựa trên chủ đề văn hóa
+                (Hoa Sen, Tứ Cảnh, Cửu Ngư, Thiên Nga…). Chuẩn bị nguyên liệu
+                trang trí cao cấp: men màu, bột vàng 24k và các phụ gia đặc biệt.
               </p>
             </div>
             <div className="step">
               <div className="step-number">3</div>
-              <h3>Tạo Hình</h3>
+              <h3>Vẽ Trang Trí Thủ Công</h3>
               <p>
-                Tạo hình thủ công bằng các kỹ thuật truyền thống của làng gốm
-                Chu Đậu.
+                Nghệ nhân sử dụng kỹ thuật vẽ men, vẽ vàng, khắc nổi để thực
+                hiện họa tiết. Mỗi sản phẩm làm 100% thủ công, đảm bảo tính
+                độc bản và giá trị nghệ thuật cao.
               </p>
             </div>
             <div className="step">
               <div className="step-number">4</div>
-              <h3>Hoàn Thiện</h3>
+              <h3>Hoàn Thiện Sản Phẩm</h3>
               <p>
-                Trang trí và vẽ chi tiết, mang tính cá nhân hóa cho mỗi tác
-                phẩm.
+                Xử lý hoàn thiện sản phẩm bằng cách đánh bóng men và nung men
+                lần cuối nếu cần. Tăng độ bền, độ bóng và màu sắc chân thực.
               </p>
             </div>
             <div className="step">
               <div className="step-number">5</div>
-              <h3>Nung Lửa</h3>
+              <h3>Kiểm Tra Chất Lượng</h3>
               <p>
-                Nung ở nhiệt độ cao để tạo độ bền vững và vẻ đẹp thẩm mỹ cuối
-                cùng.
+                Kiểm tra nghiêm ngặt độ hoàn thiện, màu men, họa tiết và không
+                khuyết điểm. Đảm bảo đạt tiêu chuẩn xuất khẩu trước khi chấp nhận.
+              </p>
+            </div>
+            <div className="step">
+              <div className="step-number">6</div>
+              <h3>Đóng Gói & Phân Phối</h3>
+              <p>
+                Đóng gói trong hộp gỗ hoặc hộp cao cấp có chứng nhận nguồn gốc,
+                kèm tài liệu văn hóa và mã QR. Chuyển đến kho hoặc giao cho
+                các kênh phân phối.
               </p>
             </div>
           </div>

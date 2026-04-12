@@ -155,7 +155,7 @@
 
 .process-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
 }
 
@@ -163,7 +163,7 @@
   background: white;
   border: 2px solid #C4A76B;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
   transition: all 0.3s;
 }
@@ -181,21 +181,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.75rem;
   font-weight: 700;
   font-size: 1.2rem;
 }
 
 .step h3 {
   color: #333;
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .step p {
   color: #666;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.8rem;
+  line-height: 1.4;
 }
 
 .about-values {
@@ -263,6 +264,12 @@
   flex-wrap: wrap;
 }
 
+@media (max-width: 1200px) {
+  .process-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .about-hero h1 {
     font-size: 1.8rem;
@@ -273,7 +280,7 @@
   }
 
   .process-steps {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .philosophy-grid {
