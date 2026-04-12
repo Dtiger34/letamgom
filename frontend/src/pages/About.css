@@ -64,14 +64,14 @@
 .about-inspiration {
   margin-bottom: 4rem;
   padding: 3rem;
-  background: #f9f9f9;
+  background: #C4A76B;
   border-radius: 8px;
 }
 
 .about-inspiration h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #8B6F47;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -83,7 +83,7 @@
 .inspiration-content p {
   font-size: 1rem;
   line-height: 1.8;
-  color: #555;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
@@ -94,12 +94,15 @@
 
 .about-philosophy {
   margin-bottom: 4rem;
+  background: #C4A76B;
+  padding: 3rem;
+  border-radius: 8px;
 }
 
 .about-philosophy h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #8B6F47;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -110,7 +113,7 @@
 }
 
 .philosophy-item {
-  background: #f9f9f9;
+  background: rgba(255, 255, 255, 0.15);
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
@@ -130,12 +133,12 @@
 .philosophy-item h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #8B6F47;
+  color: #ffffff;
   font-weight: 700;
 }
 
 .philosophy-item p {
-  color: #666;
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -196,7 +199,7 @@
 }
 
 .about-values {
-  background: #f9f9f9;
+  background: #C4A76B;
   padding: 3rem;
   border-radius: 8px;
   margin-bottom: 4rem;
@@ -205,7 +208,7 @@
 .about-values h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #8B6F47;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -218,8 +221,8 @@
 
 .values-list li {
   padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
-  color: #555;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   line-height: 1.7;
   font-size: 1rem;
 }
@@ -229,7 +232,7 @@
 }
 
 .values-list strong {
-  color: #8B6F47;
+  color: #ffffff;
 }
 
 .contact-cta {

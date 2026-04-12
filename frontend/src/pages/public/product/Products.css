@@ -3,10 +3,10 @@
 }
 
 .products-header {
-  background: #f9f9f9;
+  background: #C4A76B;
   padding: 60px 0;
   text-align: center;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: none;
 }
 
 .products-header h1 {
@@ -14,13 +14,13 @@
   font-size: 48px;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #000;
+  color: #ffffff;
 }
 
 .products-header p {
   font-family: Quicksand, sans-serif;
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
 }
 
 .products-container {

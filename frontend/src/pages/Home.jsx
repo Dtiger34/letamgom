@@ -43,14 +43,18 @@ export default function Home() {
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1 className="hero-title">LIÊN TÂM GỐM</h1>
-          <p className="hero-subtitle"><em>Hoa sen từ trầm tích, chạm đến lòng người</em></p>
-          <div className="hero-button">
-            <button
-              className="shop-btn"
-              onClick={() => navigate('/products')}
-            >
-              Khám Phá Bộ Sưu Tập
-            </button>
+          <div className="hero-subtitle-section">
+            <p className="hero-subtitle"><em>Hoa sen từ trầm tích, chạm đến lòng người</em></p>
+          </div>
+          <div className="hero-button-section">
+            <div className="hero-button">
+              <button
+                className="shop-btn"
+                onClick={() => navigate('/products')}
+              >
+                Khám Phá Bộ Sưu Tập
+              </button>
+            </div>
           </div>
         </div>
       </section>
