@@ -53,7 +53,6 @@ export default function Cart() {
                         />
                         <div>
                           <h4>{item.name}</h4>
-                          <p>{item.code}</p>
                         </div>
                       </td>
                       <td className="cart-price">

@@ -85,10 +85,6 @@ export default function ProductDetail() {
           <div className="product-detail-info">
             <h1>{product.name}</h1>
 
-            <div className="product-detail-meta">
-              <span className="product-code">{product.code}</span>
-            </div>
-
             <div className="product-detail-price">
               <span className="price">
                 {product.price?.toLocaleString('vi-VN')} VND
