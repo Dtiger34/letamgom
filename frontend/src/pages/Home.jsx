@@ -108,7 +108,6 @@ export default function Home() {
                     />
                   </div>
                   <h3 className="product-name">{product.name}</h3>
-                  <p className="product-code">{product.code}</p>
                   <p className="product-price">
                     {product.price?.toLocaleString('vi-VN')} đ
                   </p>
