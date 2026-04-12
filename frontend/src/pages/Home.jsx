@@ -130,6 +130,12 @@ export default function Home() {
               ))}
             </div>
           )}
+
+          <div className="view-all-section">
+            <Link to="/products" className="view-all-btn">
+              Xem Thêm Sản Phẩm
+            </Link>
+          </div>
         </div>
       </section>
 
