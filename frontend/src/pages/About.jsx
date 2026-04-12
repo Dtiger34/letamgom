@@ -54,7 +54,7 @@ export default function About() {
           <h2>Lấy Cảm Hứng Từ</h2>
           <div className="inspiration-content">
             <p>
-              Lấy cảm hứng từ trầm tích quý của vùng Chí Linh, nơi hội tụ giá
+              Lấy cảm hứng từ trầm tích quý của vùng Nam Sách, nơi hội tụ giá
               trị địa chất, lịch sử và phong thủy, Liên Tâm Gốm xem mỗi lớp đất
               không chỉ là nguyên liệu, mà còn là ký ức văn hóa và năng lượng
               tích tụ qua thời gian.
@@ -115,7 +115,7 @@ export default function About() {
               <div className="step-number">1</div>
               <h3>Lựa Chọn Đất</h3>
               <p>
-                Sử dụng đất từ Chí Linh, nơi hội tụ giá trị địa chất, lịch sử và
+                Sử dụng đất từ Nam Sách, nơi hội tụ giá trị địa chất, lịch sử và
                 phong thủy.
               </p>
             </div>
@@ -164,7 +164,7 @@ export default function About() {
             </li>
             <li>
               <strong>Bền Vững:</strong> Cam kết sử dụng nguyên liệu tự nhiên từ
-              Chí Linh và quy trình sản xuất thân thiện với môi trường, bảo vệ
+              Nam Sách và quy trình sản xuất thân thiện với môi trường, bảo vệ
               tài nguyên cho thế hệ tương lai.
             </li>
             <li>

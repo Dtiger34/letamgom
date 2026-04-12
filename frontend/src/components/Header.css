@@ -22,9 +22,15 @@
 
 .logo a {
   display: flex;
-  align-items: center;
   text-decoration: none;
   color: #000;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
 }
 
 .logo-image {
@@ -35,10 +41,11 @@
 
 .logo-text {
   font-family: Quicksand, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   color: #000;
+  white-space: nowrap;
 }
 
 .mobile-menu-toggle {
@@ -62,7 +69,7 @@
 
 .nav-link {
   font-family: Quicksand, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   text-decoration: none;
   font-weight: 500;

@@ -30,7 +30,10 @@ export default function Header() {
       <div className="header-container">
         <div className="logo">
           <Link to="/">
-            <img src="/image/Logo.png" alt="Liên Tâm Gốm" className="logo-image" />
+            <div className="logo-wrapper">
+              <img src="/image/Logo.png" alt="Liên Tâm Gốm" className="logo-image" />
+              <span className="logo-text">Liên Tâm Gốm</span>
+            </div>
           </Link>
         </div>
 
